@@ -15,6 +15,11 @@ The Aim of this project will be to use a SLAM Algorithm to map and navigate in a
 >>>>>>> Updated README
 =======
 
+<<<<<<< HEAD
 Mentees: Advait Dhamorikar and DIshie Vinchhi
 Mentors: Aryaman, Rishab and Sagar
 >>>>>>> Updated README
+=======
+Mentees: Advait Dhamorikar and Dishie Vinchhi
+Mentors: Aryaman, Rishab and Sagar
+>>>>>>> Update
