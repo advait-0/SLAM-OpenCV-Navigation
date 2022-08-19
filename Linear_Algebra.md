@@ -6,7 +6,7 @@ So understanding Linear Algebra begins with the understanding of Vectors.
 
 Vectors are points in 2D or 3D space having magnitude and direction
 
-<img src="file:///run/user/1000/doc/fce6f523/Vectors.png" title="Vectors" alt="Vectors" data-align="center">
+![](https://i.imgur.com/lYM9MxI.png)
 
 The interpretation and usage of Vectors as they are varies in various fields
 
@@ -84,7 +84,7 @@ The above-mentioned *rotation* and *shear* transformation matrices can be writte
 
 This gives us the compositon matrix
 
-![](https://latex.codecogs.com/svg.image?\huge%20\begin{bmatrix}%20-2&%20-1%20\\%201&%203%20\\\end{bmatrix})
+![](https://latex.codecogs.com/svg.image?\huge%20\begin{bmatrix}%20-2&%20-1%20\\%201&%203%20\\\end{bmatrix}\\ )
 
 Any given vector matrix multiplied to this matrix will give the product vector which has been both rotated as well as sheared.
 
