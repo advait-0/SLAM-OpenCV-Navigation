@@ -1,9 +1,0 @@
-<launch>
-    <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="paused" value="false"/>
-        <arg name="world_name" value="$file://home/advait/Downloads/iscas_museum.sdf"/>
-        <arg name="gui" value="true"/>
-        <arg name="headless" value="false"/>
-        <arg name="debug" value="false"/>
-    </include>
-</launch>
