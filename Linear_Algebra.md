@@ -6,7 +6,7 @@ So understanding Linear Algebra begins with the understanding of Vectors.
 
 Vectors are points in 2D or 3D space having magnitude and direction
 
-<img src="file:///run/user/1000/doc/fce6f523/Vectors.png" title="Vectors" alt="Vectors" data-align="center">
+![](https://i.imgur.com/lYM9MxI.png)
 
 The interpretation and usage of Vectors as they are varies in various fields
 
@@ -78,13 +78,13 @@ The above-mentioned *rotation* and *shear* transformation matrices can be writte
 
 
 
-![](https://latex.codecogs.com/svg.image?\huge%20\begin{bmatrix}%200&%20-1%20\\%201&%200%20\\\end{bmatrix}\begin{bmatrix}1%20&3%20%20\\%202&1%20%20\\\end{bmatrix}%20=%20\begin{bmatrix}0*1+(-1*2)%20&%20%20%200*3+(-1*1)%20%20\\1*1+0*2%20&1*3+0*1%20%20\\\end{bmatrix})
+![](https://i.imgur.com/9ax8is8.png)
 
 
 
 This gives us the compositon matrix
 
-![](https://latex.codecogs.com/svg.image?\huge%20\begin{bmatrix}%20-2&%20-1%20\\%201&%203%20\\\end{bmatrix})
+![](https://i.imgur.com/AfeHA3T.png)
 
 Any given vector matrix multiplied to this matrix will give the product vector which has been both rotated as well as sheared.
 
@@ -141,11 +141,11 @@ Linear systems of equations can be solved using matrices
 
 wherein the coefficients of the variables can be assumed to be a transformation matrix and the variables as a vector to which the transformation is being applied, the constant of such equations give us the resultant vectors.
 
-![]![](https://latex.codecogs.com/svg.image?\huge%20\\2x+5y+3z=-3\\4x+0y+8z=0\\1x+3y+0z=2\\)
+![](https://i.imgur.com/XSepbwH.png)
 
 The given equations can be represented as:
 
-![](https://latex.codecogs.com/svg.image?\huge%20\begin{bmatrix}2%20&5%20%20&3%20%20\\%204&%200%20&%208%20\\1%20&%203%20&%200%20\\\end{bmatrix}\begin{bmatrix}x%20\\y%20\\z\end{bmatrix}%20=%20\begin{bmatrix}-3%20\\0%20\\2\end{bmatrix})
+![](https://i.imgur.com/zZdWJzo.png)
 
 To obtain the values of x,y and z we use the concept of inverse which essentially reverses the change produced by the transformation matrix. The resultant obtained by multiplying a matrix by its inverse gives us no net change, which can also be denoted by a unit matrix having same order as the transformation matrix
 
@@ -157,10 +157,6 @@ To obtain the values of x,y and z we use the concept of inverse which essentiall
 
 **Rank** of a matrix is defined as the number of dimensions in the output of a transformation
 
-<iframe src='https://gfycat.com/ifr/CleanDisloyalFishingcat' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe>
-
-<iframe src='https://gfycat.com/ifr/CleanDisloyalFishingcat' frameborder='0' scr
-olling='no' allowfullscreen width='640' height='404'></iframe>
 
 <img src="https://thumbs.gfycat.com/LimpingMasculineGermanshepherd-size_restricted.gif" title="" alt="" data-align="center">
 
@@ -199,3 +195,11 @@ Usually done using abovementioned linear transformation methods
 ### Eigenvectors and Eigenvalues
 
 During a linear transformation if a vector doesn't rotate and travels only along it's span, it's called an eigenvector and the factor by which its dimensions change is called their eigenvalue
+
+![](https://latex.codecogs.com/png.image?\dpi{200}%20A\overrightarrow{v}=\lambda%20\overrightarrow{v})
+
+Any eigenvector multiplied by a transformation matrix can be represented by a multiplication of itself and its eigenvalue
+![](https://i.imgur.com/24MtF2P.png)
+
+Numerically Eigenvalues are computed as:
+![](https://i.imgur.com/bi1C5VM.png)
