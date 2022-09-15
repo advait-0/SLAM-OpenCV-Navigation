@@ -1,12 +1,16 @@
 <?xml version='1.0'?>
 
 <robot name="differential_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
     <xacro:include filename="$(find slam_simulations)/urdf/differential_bot.gazebo"/>
-    <link name="robot_footprint"></link>
+
+
+
+    <link name="base_link"></link>
 
     <joint name="robot_footprint_joint" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="robot_footprint"/>
+        <parent link="base_link"/>
         <child link="chassis"/>
     </joint>
 
