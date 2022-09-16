@@ -7,6 +7,7 @@
   <arg name="z" default="0"/>
   <arg name="model" default="$(find slam_simulations)/urdf/differential_bot.xacro"/>
  
+
   <!--Launch Robot after converting xacro-->
   <!--include file="$(find my_simulations)/launch/robot_description.launch"/-->
 

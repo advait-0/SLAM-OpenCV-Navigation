@@ -1,0 +1,20 @@
+<launch>
+
+  <!-- Map Server Arguments -->
+
+  <arg name="map_file" default="$(find slam_simulations)/Maps/iscas_museum.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!-- Arguments -->
+  <arg name="scan_topic"     default="scan"/>
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+
+  <!-- AMCL -->
+  <node pkg="amcl" type="amcl" name="amcl">
+
+  </node>
+</launch>
+
+
