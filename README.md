@@ -5,7 +5,7 @@
  
 </p>
 
-A simulation of a Bot in Gazebo and RViz which creates a map of it's environment and navigates through it while avoiding obstacles
+A simulation of a Bot in Gazebo and RViz which creates a map of it's environment and navigates through it while avoiding obstacles.
 
 
 ## Table of Contents
@@ -48,15 +48,15 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 ### Tech Stack and Tools
 
-<img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />      ROS Noetic
+<img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />         ROS Noetic
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />          OpenCV
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />         OpenCV
 
-<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />       Gazebo
+<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />         Gazebo
 
-<img src="https://raw.githubusercontent.com/ros-visualization/rviz/noetic-devel/images/splash.png" width="60" height="50" />   RViz
+<img src="https://raw.githubusercontent.com/ros-visualization/rviz/noetic-devel/images/splash.png" width="60" height="50" />         RViz
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="60" height="50" />   Python
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="60" height="50" />         Python
 
 
 
@@ -68,20 +68,18 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 ### Prerequisites
  1. [ROS Noetic](http://wiki.ros.org/noetic/Installation)
 
-2. [Gazebo Version: 11.11](https://gazebosim.org/docs/garden/getstarted)
+2. [Gazebo Version: 11.11](https://classic.gazebosim.org/download)
 
 3. [RViz](http://wiki.ros.org/rviz/UserGuide)
 
-4. [Ubuntu or it's flavours Versioned 18.04 or 20.04](www.ubuntu.com/)
+4. [Ubuntu or it's flavours Versioned 20.04](https://ubuntu.com/)
   
 ### Installation
 
 1. Clone the repo
 
 <code>
-
-git clone --recursive https://github.com/notad22/SLAM-OpenCV-Navigation.git
-
+git clone https://github.com/notad22/SLAM-OpenCV-Navigation.git
 </code>
 
 2. Install the dependencies
@@ -122,13 +120,13 @@ sudo apt-get install ros-noetic-tf
 
 1. After cloning the repo, source the following
    <code>
-   source /opt/ros/noetic/devel/setup.bash   
+   source /opt/ros/noetic/setup.bash   
    </code>
    <code>
    source ~/catkin_ws/devel/setup.bash
    </code>
 
-or you can add these commands to your bashrc and source it instead everytime you want to launch a file
+(Alternative: You can add these commands to your bashrc.)
 
 2. You can launch a specific launch file based upon your usage
     - world.launch - just launches the bot in the world 
@@ -142,6 +140,7 @@ or you can add these commands to your bashrc and source it instead everytime you
 cd ~/catkin_ws/src/slam_simulations/launch
 </code>
 
+ 
 4. Launch the launchfile based on your usage:
 <code>
 roslaunch slam_simulations file_name.launch
@@ -150,8 +149,8 @@ roslaunch slam_simulations file_name.launch
 ## Project Methodology
 - The project started off by learning ROS commands and it's file structures and learning how to create a launch file.
 - A model bot was then used to which links, joints and sensors were added for it's usage in gazebo.
-- We then used the sensor readings from our hokuyo lidar and kinect sensor to create a map of our surroundings using the Rao-Blackwellized filter theory.
-- Various deep learning modules and filters were then studied so as to understand and implement the techniques to localize the bot in it's environment using monte carlo localization.
+- We then used the sensor readings from our hokuyo lidar and kinect sensor to create a map of our surroundings using the gmapping package in ROS.
+- Various deep learning modules and filters were then studied so as to understand and implement the techniques to localize the bot in it's environment using adaptive monte carlo localization.
 - YOLO was then used to detect objects in the environment of the bot, darknet opensource framework was used for this.
   
 ## Results and Demo
@@ -163,7 +162,9 @@ roslaunch slam_simulations file_name.launch
 
 ## Future Work
 
-- [ ] To implement the bot on real hardware
+ 
+- [ ] To merge tracking with SLAM for a more lucrative output.
+- [ ] To implement the bot on real hardware.
   
 
 ## Troubleshooting
@@ -174,7 +175,7 @@ roslaunch slam_simulations file_name.launch
 
 * [Advait Dhamorikar](https://github.com/notad22)- advaitdhamorikar@gmail.com
 
-* [Dishie Vincchi](https://github.com/dishie2498) - vdishie@gmail.com
+* [Dishie Vinchhi](https://github.com/dishie2498) - vdishie@gmail.com
 
   
 
@@ -188,8 +189,10 @@ A special thanks to our mentors for this project:
   <br/>
 
 ## Resources
+
 - [Linear Algebra](https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B)
 - [Deep Learning Specialisation](https://www.coursera.org/specializations/deep-learning)
+- [Notes of Linear Algebra and DL](https://github.com/notad22/SLAM-OpenCV-Navigation/tree/dishie_notes)
 - [Object Detection in ROS](https://github.com/leggedrobotics/darknet_ros)
 
 
