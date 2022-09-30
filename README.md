@@ -12,15 +12,16 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 * [About](#about)
 
-* [Tech Stack and Tools](#tech-stack-and-tools)
+   * [Tech Stack and Tools](#tech-stack-and-tools)
 
-* [File Structure](#file-structure)
+   * [File Structure](#file-structure)
+* [Getting Started](#getting-started)
 
-* [Prerequisites](#prerequisites)
+  * [Prerequisites](#prerequisites)
 
-* [Installation](#installation)
+  * [Installation](#installation)
 
-* [Usage](#usage)
+  * [Usage](#usage)
 
 * [Project Methodology](#project-methodology)
 
@@ -61,12 +62,46 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 
 ### File Structure
+```  
+|--📁urdf
+|    |--   📄differential_bot.xacro            # xacro file containing all necessary inofrmation to define 
+|    |--   📄differential_bot.gazebo           # gazebo file with all necessary sensor plugins                                                        
+|
+|--📁meshes
+|    |--📄hokuyo.dae                           # mesh for hokuyo lidar
+|    |--📄kinect.dae                           # mesh for kinect sensor
+|
+|--📁rviz
+|    |--📄differential_bot.rviz                # rviz config file for bot launch
+|  
+|--📁world
+|    |--📄iscas_museum.sdf                      # bot environment file
+|
+|--📁launch
+|    |--📄world.launch                          # world launch file to launch bot with environment
+|    |--📄amcl.launch                           # launch file used for mapping the environment
+|    |--📄robot_description.launch              # launches the bot xacro along with necessary nodes
+|    |--📄navigation_stack.launch               # launch file for autonomous navigation of the bot
+|
+|--📁Maps
+|    |--📄iscas_museum.pgm                      # map portable grey map file
+|    |--📄iscas_museum.yaml                     # environment map yaml
+|
+|--📁config
+|    |--📄global_costmap_params.yaml            # global and local costmap parameter files 
+|    |--📄local_costmap_params.yaml
+|    |--📄base_local_planner_params.yaml
+|    |--📄costmap_common_params.yaml
+|    
+|
+|--📄CMakeLists.txt
+|--📗package.xml
+```  
 
-![](https://user-images.githubusercontent.com/99654265/193124139-23f87a70-1c6a-484e-b7fb-cc17b8e1329c.png)
 
-
+## Getting Started
 ### Prerequisites
- 1. [ROS Noetic](http://wiki.ros.org/noetic/Installation)
+1. [ROS Noetic](http://wiki.ros.org/noetic/Installation)
 
 2. [Gazebo Version: 11.11](https://classic.gazebosim.org/download)
 
@@ -118,7 +153,7 @@ sudo apt-get install ros-noetic-tf
 
 ## Usage
 
-1. After cloning the repo, source the following
+1. After cloning the repo, source the following  
    <code>
    source /opt/ros/noetic/setup.bash   
    </code>
@@ -129,23 +164,26 @@ sudo apt-get install ros-noetic-tf
 
 (Alternative: You can add these commands to your bashrc.)
 
-2. You can launch a specific launch file based upon your usage
-    - world.launch - just launches the bot in the world 
-    - amcl.launch   - used to create a map of the environment using monte carlo 
-                                 localization techniques
-    - navigation_stack.launch - used to autonomously navigate the bot in the environment
-
-  
-3. For launching the bot navigate to the launch folder 
+2. For launching the bot navigate to the launch folder 
 <code>
 cd ~/catkin_ws/src/slam_simulations/launch
-</code>
+</code>  
 
- 
-4. Launch the launchfile based on your usage:
+3. Launch the world.launch file at first to get the bot with it's sensors and it's environment  
+
+4. Open a new terminal tab or window and source the above mentioned commands
+
+5. Launch the launchfile based on your use-case:
 <code>
 roslaunch slam_simulations file_name.launch
 </code>
+
+ - amcl.launch   - used to create a map of the environment using monte carlo 
+                                 localization techniques  
+                              (suitable controller can be used here)
+ - navigation_stack.launch - used to autonomously navigate the bot in the environment
+
+    
 
 ## Project Methodology
 - The project started off by learning ROS commands and it's file structures and learning how to create a launch file.
@@ -157,8 +195,11 @@ roslaunch slam_simulations file_name.launch
 ## Results and Demo
 
 
-<video src="https://user-images.githubusercontent.com/99654265/193127103-8e45a508-9055-4779-ad68-afbe58d7d497.mp4" controls="controls" style="max-width: 730px;">
-</video>
+
+https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-a604-f91be27b35bb.mp4
+
+
+
 
 
 ## Future Work
