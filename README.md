@@ -40,23 +40,23 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 ## About
 
-* The aim of the project was to design a bot that could map and navigate in the environment provided to it and simultaneously follow an object while avoiding obstacles.
+* The aim of the project is to design a bot that could map and navigate in the environment provided to it and simultaneously follow an object while avoiding obstacles.
 
-* ROS was used to make the model of the bot functional, Gazebo and RViz was used for simulational and python for scripting.
+* ROS was used to make the model of the bot functional, Gazebo and RViz were used for simulation and python for scripting.
 
   
 
 ### Tech Stack and Tools
 
-<img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />         ROS Noetic
+<img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />            ROS Noetic
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />         OpenCV
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />            OpenCV
 
-<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />         Gazebo
+<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />            Gazebo
 
-<img src="https://raw.githubusercontent.com/ros-visualization/rviz/noetic-devel/images/splash.png" width="60" height="50" />         RViz
+<img src="https://raw.githubusercontent.com/ros-visualization/rviz/noetic-devel/images/splash.png" width="60" height="50" />            RViz
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="60" height="50" />         Python
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="60" height="50" />            Python
 
 
 
@@ -122,6 +122,7 @@ sudo apt-get install ros-noetic-tf
    <code>
    source /opt/ros/noetic/setup.bash   
    </code>
+   <p></p>
    <code>
    source ~/catkin_ws/devel/setup.bash
    </code>
@@ -168,8 +169,8 @@ roslaunch slam_simulations file_name.launch
   
 
 ## Troubleshooting
-- Clone the darknet ROS repository recursively to avoid possible CMake errors
-- To achieve better navigation yaml parameters in the config can be tuned 
+- Clone the darknet ROS repository recursively to avoid possible CMake errors.
+- To achieve better navigation yaml parameters in the config can be tuned. 
 
 ## Contributors
 
