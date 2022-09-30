@@ -14,11 +14,11 @@
    <arg name="laser_topic"   default="hokuyo_link"/>
 
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find slam_simulations)/Navigation/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find slam_simulations)/Navigation/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find slam_simulations)/Navigation/local_costmap_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find slam_simulations)/Navigation/global_costmap_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find slam_simulations)/Navigation/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find slam_simulations)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find slam_simulations)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find slam_simulations)/config/local_costmap_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find slam_simulations)/config/global_costmap_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find slam_simulations)/config/base_local_planner_params.yaml" command="load" />
     
     <!-- <param name="global_costmap/global_frame" value="$(arg global_frame_id)"/> -->
     <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
