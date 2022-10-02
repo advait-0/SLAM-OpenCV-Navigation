@@ -188,13 +188,13 @@ roslaunch slam_simulations file_name.launch
  
  6. darknet_ros.launch - Darknet is an open source neural network which implements the YOLO algorithm.
                        This launch file will detect objects in the surroundings of the robot and identify them.
-                       You can visit the repo below and follow the given steps for implementation of YOLO.
+                       <p>You can visit the repo below and follow the given steps for implementation of YOLO.</p>
                        [darknet_ros](https://github.com/leggedrobotics/darknet_ros.git)
-                       You can clone the above repo using:
+                       <p>You can clone the above repo using:</p>
                        <code>
                        git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
                        </code>
-                       Make sure you clone it recursively.
+ <p>Make sure to clone it recursively.</p>
                        
     
 
