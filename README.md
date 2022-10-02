@@ -191,7 +191,7 @@ roslaunch slam_simulations file_name.launch
 ## Project Methodology
 - The project started off by learning ROS commands and it's file structures and learning how to create a launch file.
 - A model bot was then used to which links, joints and sensors were added for it's usage in gazebo.
-- We then used the sensor readings from our hokuyo lidar and kinect sensor to create a map of our surroundings using the gmapping package in ROS.
+- We then used the sensor readings from our hokuyo lidar to create a map of our surroundings using the gmapping package in ROS.
 - Various deep learning modules and filters were then studied so as to understand and implement the techniques to localize the bot in it's environment using adaptive monte carlo localization.
 - YOLO was then used to detect objects in the environment of the bot, darknet opensource framework was used for this.
   
