@@ -103,7 +103,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 ### Prerequisites
 1. [ROS Noetic](http://wiki.ros.org/noetic/Installation)
 
-2. [Gazebo Version: 11.11](https://classic.gazebosim.org/download)
+2. [Gazebo Version: 11.0.0](https://classic.gazebosim.org/download)
 
 3. [RViz](http://wiki.ros.org/rviz/UserGuide)
 
