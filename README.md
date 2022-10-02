@@ -93,7 +93,6 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 |    |--📄base_local_planner_params.yaml
 |    |--📄costmap_common_params.yaml
 |    
-|
 |--📄CMakeLists.txt
 |--📗package.xml
 ```  
@@ -111,80 +110,76 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
   
 ### Installation
 
-1. Clone the repo
+1. Clone the repo  
+    <code>
+    git clone --recursive https://github.com/notad22/SLAM-OpenCV-Navigation.git
+    </code>
 
-<code>
-git clone https://github.com/notad22/SLAM-OpenCV-Navigation.git
-</code>
+2. Install the dependencies  
+   <code>
+   sudo apt-get install ros-noetic-cv-bridge
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-navfn
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-amcl
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-gmapping
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-map-server
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-move-base
+   </code>  
+   <code>
+   sudo apt-get install ros-noetic-tf
+   </code>  
 
-2. Install the dependencies
 
-<code>
-sudo apt-get install ros-noetic-cv-bridge
-</code>
-<br/>
-
-<code>
-sudo apt-get install ros-noetic-navfn
-</code>  
-<br />
-<code>
-sudo apt-get install ros-noetic-amcl
-</code>  
-<br />
-
-<code>
-sudo apt-get install ros-noetic-gmapping
-</code>  
-<br />
-<code>
-sudo apt-get install ros-noetic-map-server
-</code>  
-<br />
-<code>
-sudo apt-get install ros-noetic-move-base
-</code>  
-<br />
-<code>
-sudo apt-get install ros-noetic-tf
-</code>  
 
 
 
 ## Usage
 
-1. After cloning the repo, source the following  
-   <code>
-   source /opt/ros/noetic/setup.bash   
-   </code>
-   <p></p>
-   <code>
-   source ~/catkin_ws/devel/setup.bash
-   </code>
+1. After cloning the repo, source the following    
+
+     <code>
+     source /opt/ros/noetic/setup.bash   
+     </code>
+     <p></p>
+     <code>
+     source ~/catkin_ws/devel/setup.bash
+     </code>
 
 (Alternative: You can add these commands to your bashrc.)
 
-2. For launching the bot navigate to the launch folder 
-<code>
-cd ~/catkin_ws/src/slam_simulations/launch
-</code>  
+2. For launching the bot navigate to the launch folder   
+
+   <code>
+    cd ~/catkin_ws/src/slam_simulations/launch
+   </code>  
 
 3. Launch the world.launch file at first to get the bot with it's sensors and it's environment  
 
 4. Open a new terminal tab or window and source the above mentioned commands
 
-5. Launch the launchfile based on your use-case:
-<code>
-roslaunch slam_simulations file_name.launch
-</code>
+5. Launch the launchfile based on your use-case:  
+
+   <code>
+   roslaunch slam_simulations file_name.launch
+   </code>
+
+ - gmapping.launch - uses laser readings and pose data to create a 2D occupancy grid map
+                     of the robot's surroundings. 
 
  - amcl.launch   - used to create a map of the environment using monte carlo 
-                                 localization techniques  
+                                 localization techniques.   
                               (suitable controller can be used here)
- - gmapping.launch - uses laser readings and pose data to create a 2D occupancy grid map
-                     of the robot's surroundings.
-
- - navigation_stack.launch - used to autonomously navigate the bot in the environment
+ 
+ - navigation_stack.launch - used to autonomously navigate the bot in the environment.
  
  6. darknet_ros.launch - Darknet is an open source neural network which implements the YOLO algorithm.
                        This launch file will detect objects in the surroundings of the robot and identify them.
@@ -193,10 +188,37 @@ roslaunch slam_simulations file_name.launch
                        <p>You can clone the above repo using:</p>
                        <code>
                        git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
-                       </code>
- <p>Make sure to clone it recursively.</p>
+                       </code>  
+                       Make sure to clone it recursively.   
+                       After cloning it navigate to the package directory.   
+                       <code>
+                        cd ~/catkin_ws/src/darknet_ros/darknet_ros/launch
+                       </code>   
+                       Launch the launchfile.   
+                       <code>
+                        roslaunch darknet_ros darknet_ros.launch
+                       </code> 
                        
+                       
+                       
+   
     
+   
+   
+                       
+   
+ 
+  
+ 
+      
+   
+          
+    
+   
+   
+     
+   
+
 
 ## Project Methodology
 - The project started off by learning ROS commands and it's file structures and learning how to create a launch file.
@@ -208,7 +230,7 @@ roslaunch slam_simulations file_name.launch
   
 ## Results and Demo
 
-
+![Gmapping](https://user-images.githubusercontent.com/99654265/193448722-8218e642-e7e7-486b-b22e-1eeab0678895.gif)
 
 https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-a604-f91be27b35bb.mp4
 
@@ -216,9 +238,13 @@ https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-
 
 
 
+
+
+
+
 ## Future Work
 
- 
+- [ ] To add a flowchart for better implementation explanation.
 - [ ] To merge tracking with SLAM for a more lucrative output.
 - [ ] To implement the bot on real hardware.
   
