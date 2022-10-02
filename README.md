@@ -185,7 +185,9 @@ roslaunch slam_simulations file_name.launch
                      of the robot's surroundings.
 
  - navigation_stack.launch - used to autonomously navigate the bot in the environment
-
+ 
+ -darknet_ros.launch - Darknet is an open source neural network which implements the YOLO algorithm.
+                       This launch file will detect objects in the surroundings of the robot and identify them.
     
 
 ## Project Methodology
