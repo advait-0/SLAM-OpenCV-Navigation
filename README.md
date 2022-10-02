@@ -49,7 +49,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 ### Tech Stack and Tools
 
- <img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" /><pre>            </pre>ROS Noetic
+ <img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ROS Noetic
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />            OpenCV
 
