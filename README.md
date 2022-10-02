@@ -241,7 +241,8 @@ A special thanks to our mentors for this project:
 - [Linear Algebra](https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B)
 - [Deep Learning Specialisation](https://www.coursera.org/specializations/deep-learning)
 - [Notes of Linear Algebra and DL](https://github.com/notad22/SLAM-OpenCV-Navigation/tree/dishie_notes)
-- [Object Detection in ROS](https://github.com/leggedrobotics/darknet_ros)
+- [Object Detection in ROS](https://github.com/leggedrobotics/darknet_ros) 
+- [Playlist for localisation](https://www.youtube.com/playlist?list=PLgnQpQtFTOGSeTU35ojkOdsscnenP2Cqx)
 
 
 ## License
