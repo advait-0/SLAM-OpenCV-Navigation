@@ -181,6 +181,9 @@ roslaunch slam_simulations file_name.launch
  - amcl.launch   - used to create a map of the environment using monte carlo 
                                  localization techniques  
                               (suitable controller can be used here)
+ - gmapping.launch - uses laser readings and pose data to create a 2D occupancy grid map
+                     of the robot's surroundings.
+
  - navigation_stack.launch - used to autonomously navigate the bot in the environment
 
     
