@@ -51,9 +51,9 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
  <img src="https://i.imgur.com/VWH6TKY.png" width="50" height="13" />&nbsp; &nbsp; &nbsp; &nbsp;ROS Noetic
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />&nbsp; &nbsp; &nbsp; &nbsp;OpenCV
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/OpenCV_Logo_with_text.png/487px-OpenCV_Logo_with_text.png" width="30" height="40" />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenCV
 
-<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />&nbsp; &nbsp; &nbsp; &nbsp;Gazebo
+<img src="https://seeklogo.com/images/G/gazebo-logo-51C46471CA-seeklogo.com.png" width="40" height="50" />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Gazebo
 
 <img src="https://raw.githubusercontent.com/ros-visualization/rviz/noetic-devel/images/splash.png" width="60" height="50" />&nbsp; &nbsp; &nbsp; &nbsp;RViz
 

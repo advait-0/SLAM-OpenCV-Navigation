@@ -6,24 +6,30 @@
 
  <!--- Run AMCL --> 
    <include file="$(find slam_simulations)/launch/amcl.launch" />
+   <arg name="base_global_planner" default="navfn/NavfnROS"/>
+   <arg name="base_local_planner" default="base_local_planner/TrajectoryPlannerROS"/>
    
    <!-- <arg name="odom_frame_id"   default="odom"/> -->
-   <arg name="base_frame_id"   default="base_link"/>
+ 
    <!-- <arg name="globalframe_id"   default="odom"/> -->
-   <arg name="odom_topic"   default="odom"/>
-   <arg name="laser_topic"   default="hokuyo_link"/>
+   
+   <!-- <arg name="laser_topic"   default="hokuyo_link"/> -->
 
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find slam_simulations)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find slam_simulations)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find slam_simulations)/config/local_costmap_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find slam_simulations)/config/global_costmap_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find slam_simulations)/config/base_local_planner_params.yaml" command="load" />
+   <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>  
+    <param name="recovery_behavior_enabled" value="true"/>
+    <param name="controller_frequency" value="1.0"/>
+    <rosparam file="$(find slam_simulations)/Navigation/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find slam_simulations)/Navigation/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find slam_simulations)/Navigation/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find slam_simulations)/Navigation/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="$(find slam_simulations)/Navigation/base_local_planner_params.yaml" command="load" />
     
     <!-- <param name="global_costmap/global_frame" value="$(arg global_frame_id)"/> -->
-    <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+   
     <!-- <param name="local_costmap/global_frame" value="$(arg odom_frame_id)"/> -->
-    <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+   
     <!-- <param name="global_costmap/global_frame" value="$(arg global_frame_id)"/> -->
  </node>
 
