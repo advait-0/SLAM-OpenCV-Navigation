@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- Robot default pose -->
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+  <arg name="model" default="$(find slam_simulations)/urdf/differential_bot.xacro"/>
+ 
+
+  <!--Launch Robot after converting xacro-->
+  <!--include file="$(find my_simulations)/launch/robot_description.launch"/-->
+
+  <!-- Default world file -->
+  <arg name="world_file" default="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+  <!--Gazebo world launch -->
+   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find slam_simulations)/world/iscas_museum.sdf"/>
+      <arg name="paused" value="false"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="gui" value="true"/>
+      <arg name="recording" value="false"/>
+      <arg name="debug" value="false"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
+
+  <!-- spawn robot-->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -param robot_description -model differential_bot
+             -x $(arg x) -y $(arg y) -z $(arg z)"/>
+             
+             <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+ </node>
+ 
+ <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+<node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
+ 
+ <!--launch rviz-->
+ <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+</launch>
