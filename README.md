@@ -64,7 +64,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 ### File Structure
 ```  
 |--📁urdf
-|    |--   📄differential_bot.xacro            # xacro file containing all necessary information to define 
+|    |--   📄differential_bot.xacro            # xacro file containing all necessary inofrmation to define 
 |    |--   📄differential_bot.gazebo           # gazebo file with all necessary sensor plugins                                                        
 |
 |--📁meshes
@@ -112,7 +112,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 1. Clone the repo  
     <code>
-    git clone https://github.com/notad22/SLAM-OpenCV-Navigation.git
+    git clone --recursive https://github.com/notad22/SLAM-OpenCV-Navigation.git
     </code>
 
 2. Install the dependencies  
@@ -172,14 +172,14 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
    roslaunch slam_simulations file_name.launch
    </code>
 
-  - gmapping.launch - uses laser readings and pose data to create a 2D occupancy grid map
+ - gmapping.launch - uses laser readings and pose data to create a 2D occupancy grid map
                      of the robot's surroundings. 
 
-  - amcl.launch   - used to create a map of the environment using monte carlo 
+ - amcl.launch   - used to create a map of the environment using monte carlo 
                                  localization techniques.   
                               (suitable controller can be used here)
  
-  - navigation_stack.launch - used to autonomously navigate the bot in the environment.
+ - navigation_stack.launch - used to autonomously navigate the bot in the environment.
  
  6. darknet_ros.launch - Darknet is an open source neural network which implements the YOLO algorithm.
                        This launch file will detect objects in the surroundings of the robot and identify them.
@@ -234,7 +234,6 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-a604-f91be27b35bb.mp4
 
-![detection](https://user-images.githubusercontent.com/99654265/193986403-77383fef-19ea-469a-b0e8-45e02841063d.gif)
 
 
 
@@ -277,7 +276,7 @@ A special thanks to our mentors for this project:
 - [Deep Learning Specialisation](https://www.coursera.org/specializations/deep-learning)
 - [Notes of Linear Algebra and DL](https://github.com/notad22/SLAM-OpenCV-Navigation/tree/dishie_notes)
 - [Object Detection in ROS](https://github.com/leggedrobotics/darknet_ros) 
-- [Playlist for Mobile Robotics](https://www.youtube.com/playlist?list=PLgnQpQtFTOGSeTU35ojkOdsscnenP2Cqx)
+- [Playlist for localisation](https://www.youtube.com/playlist?list=PLgnQpQtFTOGSeTU35ojkOdsscnenP2Cqx)
 
 
 ## License

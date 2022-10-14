@@ -7,7 +7,16 @@ project(slam_simulations)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
+  rospy
+  std_msgs
+  sensor_msgs
+  geometry_msgs
+  message_generation
+  darknet_ros_msgs 
+  )
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -62,6 +71,13 @@ find_package(catkin REQUIRED)
 #   Action1.action
 #   Action2.action
 # )
+# generate_messages(
+# #  DEPENDENCIES
+#    sensor_msgs
+#    std_msgs
+#    geometry_msgs
+#    darknet_ros_msgs
+# )
 
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
@@ -99,9 +115,8 @@ find_package(catkin REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES my_simulations
-#  CATKIN_DEPENDS other_catkin_pkg
+  INCLUDE_DIRS include
+  CATKIN_DEPENDS cv_bridge rospy sensor_msgs std_msgs geometry_msgs message_runtime darknet_ros_msgs
 #  DEPENDS system_lib
 )
 
@@ -113,7 +128,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-# ${catkin_INCLUDE_DIRS}
+${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
