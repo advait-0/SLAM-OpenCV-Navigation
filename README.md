@@ -92,11 +92,15 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 |    |--📄local_costmap_params.yaml
 |    |--📄base_local_planner_params.yaml
 |    |--📄costmap_common_params.yaml
-|    
+|
+|--📁Assets
+|    |--Slam-OpenCV-Navigation.pdf
+|
 |--📄CMakeLists.txt
 |--📗package.xml
 ```  
 
+![Flowchart(3)](https://user-images.githubusercontent.com/99654265/195963699-33a9d91a-39a0-4441-aa32-d6bc314098af.png)
 
 ## Getting Started
 ### Prerequisites
@@ -200,7 +204,10 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
                        </code> 
                        
                        
-                       
+  7. To run the object followimg script  
+     <code>
+       rosrun slam_simulations obj_following.py
+      </code>
    
     
    
@@ -244,7 +251,7 @@ https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-
 
 ## Future Work
 
-- [ ] To add a flowchart for better implementation explanation.
+- [ ] To improve the bot's object following capabilities
 - [ ] To merge tracking with SLAM for a more lucrative output.
 - [ ] To implement the bot on real hardware.
   
