@@ -241,7 +241,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 
 https://user-images.githubusercontent.com/99654265/193328844-fdec88a9-9343-4de8-a604-f91be27b35bb.mp4
 
-
+![Object detection](https://user-images.githubusercontent.com/99654265/193986403-77383fef-19ea-469a-b0e8-45e02841063d.gif)
 
 
 
