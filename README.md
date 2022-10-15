@@ -94,7 +94,7 @@ A simulation of a Bot in Gazebo and RViz which creates a map of it's environment
 |    |--📄costmap_common_params.yaml
 |
 |--📁Assets
-|    |--Slam-OpenCV-Navigation.pdf
+|    |--Slam-CV-Navigation.pdf
 |
 |--📄CMakeLists.txt
 |--📗package.xml
